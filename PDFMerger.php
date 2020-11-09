@@ -38,8 +38,17 @@ class PDFMerger
 {
 	private $_files;	//['form.pdf']  ["1,2,4, 5-19"]
 	private $_fpdi;
-
-	
+    
+    
+    /**
+	 * Merge PDFs.
+	 * @return void
+	 */
+	public function __construct()
+	{
+		require_once(dirname(__FILE__).'/tcpdf/tcpdf.php');
+		require_once(dirname(__FILE__).'/tcpdf/tcpdi.php');
+	}
 
 	/**
 	 * Add a PDF for inclusion in the merge with a valid file path. Pages should be formatted: 1,3,6, 12-16.
@@ -76,7 +85,7 @@ class PDFMerger
 	{
 		if(!isset($this->_files) || !is_array($this->_files)): throw new exception("No PDFs to merge."); endif;
 
-    $fpdi = new \TCPDI;
+    $fpdi = new TCPDI;
     $fpdi->SetPrintHeader(false);
     $fpdi->SetPrintFooter(false);
 
