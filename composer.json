@@ -1,0 +1,23 @@
+{
+    "name": "ramprasadm1986/yii2-pdfmerger",
+    "description": "PDF Merger for Yii 2",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "extension", "pdfmerger", "ramprasadm1986"],
+    "license": "Apache-2.0",
+    "version": "1.0.0",
+    "minimum-stability":"stable",
+    "authors": [
+        {
+            "name": "Ramprasad Moharana",
+            "email": "ramprasad@krititech.in"
+        }
+    ],
+	"require": {
+		"tecnickcom/tcpdf": "6.2.12"
+	},
+    "autoload": {
+        "psr-4": {
+            "ramprasadm1986\\pdfmerger\\": ""
+        }
+    }
+}
